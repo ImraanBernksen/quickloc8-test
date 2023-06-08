@@ -1,30 +1,45 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
   <router-view/>
+  <div id="app">
+    <Welcome :isLoading="isLoading" />
+    <main v-if="!isLoading">
+    </main>
+  </div>
 </template>
-
+<script>
+import Welcome from '@/components/Welcome'
+export default {
+  name: "App",
+  components: {
+    Welcome
+  },
+  data() {
+    return { isLoading: true };
+  },
+  mounted() {
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 3500);
+  }
+};
+</script>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+  --primaryColor: #FF5722;
+  --secondaryColor: #FFCCBC;
+  --accentColor: #2e302f;
+  --errorColor: #fe2a39;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+  background-color: var(--accentColor);
+  height: 100vh;
+  width: 100%;
 }
 </style>
