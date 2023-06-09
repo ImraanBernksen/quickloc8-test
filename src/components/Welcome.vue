@@ -2,7 +2,7 @@
     <div :class="{ loader: true, fadeout: !isLoading }">
         Loading ...
         <div class="image">
-            <img class="logo img-fluid" src="https://i.postimg.cc/QtS1W9tS/Quicloc8-logo.png">
+            <img class="logo img-fluid animate__animated animate__bounceIn" src="https://i.postimg.cc/QtS1W9tS/Quicloc8-logo.png">
         </div>
     </div>
 </template>
@@ -16,7 +16,7 @@ export default {
   
 <style>
 .loader {
-    background-color: var(--primaryColor );
+    background-color: var(--secondaryColor );
     bottom: 0;
     color: white;
     display: block;

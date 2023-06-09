@@ -1,0 +1,70 @@
+<template>
+    <NavBar />
+    <h1>Messages</h1>
+    <div class="message-section">
+        <div class="message">
+            <div class="card" v-for="message in messages" :key="message.id">
+                <div class="row g-0">
+                    <div class="col-md-2 m-auto">
+                        <div class="eee">
+                            E
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <p class="text-start">{{ message.message }}</p>
+                            <p class="text-start">{{ message.subject }}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2 m-auto">
+                        <p>{{ message.display }}</p>
+                        <i class="bi bi-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<script>
+import NavBar from '../components/NavBar.vue';
+import MessageData from '../messages.json';
+export default {
+    components: {
+        NavBar
+    },
+    data() {
+        return { messages: MessageData }
+    }
+}
+</script>
+<style scoped>
+.bi-star {
+    font-size: 30px;
+}
+
+.message {
+    padding-top: 40px;
+}
+
+.message-section {
+    padding-bottom: 40px;
+}
+
+.card {
+    border: 2px solid black;
+}
+
+.eee {
+    background-color: var(--primaryColor);
+    border: 3px solid black;    
+    height:100px;
+    border-radius:50%;
+    width:100px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+</style>
