@@ -11,10 +11,13 @@
           <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item">
-                <router-link to="/" class="nav-link">Home</router-link>
+                <router-link to="/" class="nav-link">Map</router-link>
               </li>
               <li class="nav-item">
                 <router-link to="/message" class="nav-link">Messages</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link to="/contact" class="nav-link">Contact Us</router-link>
               </li>
             </ul>
           </div>

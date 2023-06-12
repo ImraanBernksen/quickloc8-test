@@ -1,9 +1,9 @@
 <template>
-    <NavBar />
+    <NavBar/>
     <h1>Messages</h1>
     <div class="message-section">
         <div class="message">
-            <div class="card" v-for="message in messages" :key="message.id">
+            <div class="card p-1" v-for="message in messages" :key="message.id">
                 <div class="row g-0">
                     <div class="col-md-2 m-auto">
                         <div class="eee">
@@ -42,12 +42,16 @@ export default {
     font-size: 30px;
 }
 
+.bi-star:hover {
+    color: yellow;
+}
+
 .message {
-    padding-top: 40px;
+    padding-top: 30px;
 }
 
 .message-section {
-    padding-bottom: 40px;
+    padding-bottom: 20px;
 }
 
 .card {
@@ -56,15 +60,14 @@ export default {
 
 .eee {
     background-color: var(--primaryColor);
-    border: 3px solid black;    
-    height:100px;
-    border-radius:50%;
-    width:100px;
+    border: 3px solid black;
+    height: 100px;
+    border-radius: 50%;
+    width: 100px;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 40px;
 }
-
 </style>

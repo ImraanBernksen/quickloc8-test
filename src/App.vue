@@ -37,8 +37,11 @@ export default {
   font-family: 'Poppins', sans-serif;;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: white;
   background-color: var(--accentColor);
+}
+
+h1 {
+  text-align: center;
 }
 </style>

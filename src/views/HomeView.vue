@@ -1,32 +1,62 @@
 <template>
-  <NavBar/>
-  <h1>Welcome to QuickLoc8</h1>
+  <NavBar />
+  <h1>Map</h1>
   <div class="home">
-    <!-- <mgl-map mapStyle="https://api.maptiler.com/maps/streets-v2/style.json?key=UJIHfP1Le2KEUnI1YoD1" :zoom=14
-    :center="[8.7832, 34.5085]" style="width: 100%; height: 600px;">
-    <mgl-marker :coordinates="[30.5595, 22.9375]" color="#42b883"/>
-    <mgl-navigation-control position="top-left" />
-  </mgl-map> -->
+    <div id="map">
+  
+    </div>
   </div>
 </template>
 
 <script>
 import NavBar from '../components/NavBar.vue';
-import { MglMap, MglNavigationControl, MglMarker } from 'vue-maplibre-gl';
+import L from 'leaflet';
+import vehicleCoordinates from '../vehicleCoordinates.json';
+
 export default {
-  name: 'TaxiMap',
   components: {
-    NavBar,
-    MglMap,
-    MglNavigationControl,
-    MglMarker
+    NavBar
+  },
+  mounted() {
+    var map = L.map('map').setView([-30.5595, 22.9375], 6);
+
+    // var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    //   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    // });
+
+    // osm.addTo(map);
+
+    var googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+      maxZoom: 20,
+      subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+    });
+
+    googleStreets.addTo(map);
+
+    var myIcon = L.icon({
+    iconUrl: 'https://i.postimg.cc/P5qCgC95/ic-new-white-taxi.png',
+    iconSize: [50, 50]});
+
+    vehicleCoordinates.forEach(coord => {
+      var singleMarker = L.marker([coord.latitude, coord.longitude], { icon: myIcon });
+      var popup = singleMarker.bindPopup(coord.heading).openPopup();
+      popup.addTo(map);
+    });
+
   }
 }
 </script>
     
 <style scoped>
-body {
-  margin-bottom: 40px;
+.home {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-
+#map {
+  width: 98%;
+  height: 100vh;
+  margin: auto;
+  border: 2px solid white;
+  border-radius: 10px;
+}
 </style>

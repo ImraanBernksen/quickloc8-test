@@ -11,8 +11,8 @@
   },
   {
     "heading": "0",
-    "latitude": -34.0461583,
-    "longitude": 18.7047383
+    "latitude": "-34.0461583",
+    "longitude": "18.7047383"
   },
   {
     "heading": "0",
@@ -21,12 +21,12 @@
   },
   {
     "heading": "299",
-    "latitude": -31.8942983,
+    "latitude": "-31.8942983",
     "longitude": 26.878175
   },
   {
     "heading": "43",
-    "latitude": -31.9998233,
-    "longitude": 27.5801216
+    "latitude": "-31.9998233",
+    "longitude": "27.5801216"
   }
 ]
