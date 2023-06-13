@@ -6,16 +6,19 @@
   
     </div>
   </div>
+  <Footer/>
 </template>
 
 <script>
 import NavBar from '../components/NavBar.vue';
+import Footer from '@/components/Footer.vue';
 import L from 'leaflet';
 import vehicleCoordinates from '../vehicleCoordinates.json';
 
 export default {
   components: {
-    NavBar
+    NavBar,
+    Footer
   },
   mounted() {
     var map = L.map('map').setView([-30.5595, 22.9375], 6);

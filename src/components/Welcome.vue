@@ -14,9 +14,9 @@ export default {
 };
 </script>
   
-<style>
+<style scoped>
 .loader {
-    background-color: var(--secondaryColor );
+    background-color: var(--primaryColor );
     bottom: 0;
     color: white;
     display: block;

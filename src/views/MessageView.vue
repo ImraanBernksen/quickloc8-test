@@ -16,7 +16,7 @@
                             <p class="text-start">{{ message.subject }}</p>
                         </div>
                     </div>
-                    <div class="col-md-2 m-auto">
+                    <div class="col-md-2 m-auto text-center">
                         <p>{{ message.display }}</p>
                         <i class="bi bi-star"></i>
                     </div>
@@ -24,13 +24,16 @@
             </div>
         </div>
     </div>
+    <Footer/>
 </template>
 <script>
 import NavBar from '../components/NavBar.vue';
 import MessageData from '../messages.json';
+import Footer from '@/components/Footer.vue';
 export default {
     components: {
-        NavBar
+        NavBar,
+        Footer
     },
     data() {
         return { messages: MessageData }
