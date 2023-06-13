@@ -1,8 +1,8 @@
 <template>
-  <router-view/>
   <div id="app">
     <Welcome :isLoading="isLoading" />
     <main v-if="!isLoading">
+      <router-view/>
     </main>
   </div>
 </template>
