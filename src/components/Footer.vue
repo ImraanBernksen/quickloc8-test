@@ -13,7 +13,7 @@
                     <a class="quick" href="/contact">CONTACT US</a>
                 </div>
                 <div class="col-lg-4 m-auto">
-                    <img class="img-fluid" src="https://i.postimg.cc/QtS1W9tS/Quicloc8-logo.png" style="width: 20rem;">
+                    <a href="/"><img class="img-fluid" src="https://i.postimg.cc/QtS1W9tS/Quicloc8-logo.png" style="width: 20rem;"></a>
                 </div>
             </div>
             <p class="more text-center">Copyright &copy; 2015 - 2023 | <a href="/" class="footer-mib">Quickloc8</a></p>
