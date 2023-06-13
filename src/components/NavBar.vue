@@ -34,12 +34,8 @@ export default {
 </script>
 
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-
 .menu {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .navbar-collapse {
@@ -58,10 +54,6 @@ li {
 
 .logo {
   width: 6em;
-}
-
-.menu-list li {
-  padding: 0 5px;
 }
 
 .menu-list {

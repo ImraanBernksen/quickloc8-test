@@ -64,6 +64,6 @@ button {
 }
 
 #contact {
-  padding-bottom: 60px;
+  padding-bottom: 70px;
 }
 </style>
